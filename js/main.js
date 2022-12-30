@@ -1,7 +1,8 @@
 let tableBody = document.querySelector("tbody");
 let btnSalvar = document.querySelector(".btn"),
     modals = document.querySelector(".modal-container"),
-    form = document.querySelector("form");
+    addform = document.querySelector(".add form"),
+    editform = document.querySelector(".edit form");
 
 var database = firebase.database();
 var usersRef = firebase.database().ref('users/');
@@ -52,32 +53,47 @@ usersRef.on('value', (snapshot) => {
         tableBody.innerHTML += tr;
     }
 
+    //editar
     let editButtons = document.querySelectorAll(".edit");
     editButtons.forEach(edit =>{
         edit.addEventListener("click", () =>{
-            modals.classList.add("active");
+            document.querySelector(".edit").classList.add("active");
             let userId = edit.parentElement.parentElement.dataset.id;
             usersRef.child(userId).get().then((snapshot => {
                 //console.log(snapshot.val());
-                form.descricao.value = snapshot.val().descricao;
-                form.valor.value = snapshot.val().valor;
-                form.pagamento.value = snapshot.val().pagamento;
-                form.categoria.value = snapshot.val().categoria;
-                form.data.value = snapshot.val().data;
+                editform.descricao.value = snapshot.val().descricao;
+                editform.valor.value = snapshot.val().valor;
+                editform.pagamento.value = snapshot.val().pagamento;
+                editform.categoria.value = snapshot.val().categoria;
+                editform.data.value = snapshot.val().data;
             }))
-            form.addEventListener("submit", (e) =>{
+            editform.addEventListener("submit", (e) =>{
                 e.preventDefault();
                 usersRef.child(userId).update({
-                    descricao: form.descricao.value,
-                    valor: form.valor.value,
-                    pagamento: form.pagamento.value,
-                    categoria: form.categoria.value,
-                    data: form.data.value
+                    descricao: editform.descricao.value,
+                    valor: editform.valor.value,
+                    pagamento: editform.pagamento.value,
+                    categoria: editform.categoria.value,
+                    data: editform.data.value
                 }).then((onFullFilled) =>{
                     alert("Alterado com sucesso!")
+                    document.querySelector(".edit").classList.remove("active");
+                    editform.reset()
                 },(onRejected)=>{
                     console.log(onRejected);
                 });
+            })
+        })
+    })
+
+    // Delete
+    let deletButtons = document.querySelectorAll(".delete");
+
+    deletButtons.forEach(deletBtn =>{
+        deletBtn.addEventListener("click", () =>{
+            let userId = deletBtn.parentElement.parentElement.dataset.id;
+            usersRef.child(userId).remove().then(() =>{
+                alert("Deletado!");
             })
         })
     })
@@ -86,11 +102,11 @@ usersRef.on('value', (snapshot) => {
 // Open form
 
 btnSalvar.addEventListener("click", () =>{
-        modals.classList.add("active");
-        form.addEventListener("submit", (e) => {
+        document.querySelector(".add").classList.add("active");
+        addform.addEventListener("submit", (e) => {
             e.preventDefault();
-            writeUserData(form.descricao.value, form.valor.value, form.pagamento.value, 
-            form.categoria.value, form.data.value)
+            writeUserData(addform.descricao.value, addform.valor.value, addform.pagamento.value, 
+            addform.categoria.value, addform.data.value)
         })
 })
 
@@ -100,6 +116,7 @@ window.addEventListener("click", (e)=>{
     if(e.target == modals)
     {
         modals.classList.remove("active");
-        form.reset()
+        addform.reset();
+        editform.reset();
     }
 })
