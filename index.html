@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>App Financeiro</title>
+</head>
+<body>
+    <div class="table-container">
+        <h1 class="heading">Controle Financeiro</h1>
+        <button class="btn" id="abre">Add</button>
+        <table class="table" id="financeiro">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Pagamento</th>
+                    <th>Categoria</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+        <!--Form-->
+        <div class="modal-container">
+            <div class="modal">
+              <form action="">
+                <input type="text" name="descricao" placeholder="Descrição">
+                <input type="number" name="valor" placeholder="Valor"> 
+                <input type="text" name="pagamento" placeholder="Pagamento">
+                <input type="text" name="categoria" placeholder="Categoria">
+                <input type="date" name="data"> 
+                <button  class="btnsalvar" value="submit">Salvar</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <script src="js/script.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBt88WuddD5lW9whXSPtIjPjCx2zYQ6y1U",
+      authDomain: "financeiro-317a4.firebaseapp.com",
+      databaseURL: "https://financeiro-317a4-default-rtdb.firebaseio.com",
+      projectId: "financeiro-317a4",
+      storageBucket: "financeiro-317a4.appspot.com",
+      messagingSenderId: "131072115589",
+      appId: "1:131072115589:web:bcdcaae05fbb4f342abaec"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
+
+ 
+   
