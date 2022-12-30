@@ -2,7 +2,7 @@ let tableBody = document.querySelector("tbody");
 let btnSalvar = document.querySelector(".btn"),
     modals = document.querySelector(".modal-container"),
     addform = document.querySelector(".add form"),
-    editform = document.querySelector(".edit form");
+    editform = document.querySelector(".editar form");
 
 var database = firebase.database();
 var usersRef = firebase.database().ref('users/');
@@ -57,7 +57,7 @@ usersRef.on('value', (snapshot) => {
     let editButtons = document.querySelectorAll(".edit");
     editButtons.forEach(edit =>{
         edit.addEventListener("click", () =>{
-            document.querySelector(".edit").classList.add("active");
+            document.querySelector(".editar").classList.add("active");
             let userId = edit.parentElement.parentElement.dataset.id;
             usersRef.child(userId).get().then((snapshot => {
                 //console.log(snapshot.val());
@@ -77,7 +77,7 @@ usersRef.on('value', (snapshot) => {
                     data: editform.data.value
                 }).then((onFullFilled) =>{
                     alert("Alterado com sucesso!")
-                    document.querySelector(".edit").classList.remove("active");
+                    document.querySelector(".editar").classList.remove("active");
                     editform.reset()
                 },(onRejected)=>{
                     console.log(onRejected);
