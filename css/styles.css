@@ -257,10 +257,132 @@ header{
 
 
 
+/*-------LISTA------------*/
+button{
+  background-color: #009879;
+  color: white;
+  border-radius: 5px;
+  padding: .3rem .6rem;
+  border: none;
+  font-size: .8rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
 
+button:hover{
+  background-color: white;
+  color: #009879;
+  border: 1px #009879 solid;
+}
 
+input, select{
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    border: 1px #009879 solid;
+    outline: none;
+}
 
+.hide{
+    display: none;
+}
 
+.todo-container{
+    max-width: 450px;
+    margin: 3rem auto 0;
+    background-color: #00987a5d;
+    padding: 1.5rem;
+    border-radius: 15px;
+
+}
+
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: .3rem;
+}
+
+#cancel-edit-btn{
+    margin-top: 1rem;
+}
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+
+.todo h3{
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+.todo button{
+    margin-left: 0.4rem;
+}
+
+.done{
+    background-color: #00987ad3;
+    border-radius: 5px;
+}
+
+.done h3{
+    color: white;
+    text-decoration: line-through;
+    font-size: italic;
+}
 
 @media screen and (max-width: 768px){
     .table thead{

@@ -9,54 +9,84 @@
     <title>App Financeiro</title>
 </head>
 <body>
-    <div class="table-container">
-        <h1 class="heading">Controle Financeiro</h1>
-        <button class="btn" id="abre">Add</button>
-        <table class="table" id="financeiro">
-            <thead>
-                <tr>
-                    <th>Descrição</th>
-                    <th>Valor</th>
-                    <th>Pagamento</th>
-                    <th>Categoria</th>
-                    <th>Data</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
 
-        <!--Form Add-->
-        <div class="modal-container add">
-            <div class="modal">
-              <form action="">
-                <input type="text" name="descricao" placeholder="Descrição">
-                <input type="Text" name="valor" placeholder="Valor"> 
-                <input type="text" name="pagamento" placeholder="Pagamento">
-                <input type="text" name="categoria" placeholder="Categoria">
-                <input type="date" name="data"> 
-                <button  class="btnsalvar" value="submit">Salvar</button>
-              </form>
-            </div>
-        </div>
-
-        <!--Form Edit-->
-        <div class="modal-container editar">
-            <div class="modal">
-              <form action="">
-                <input type="text" name="descricao" placeholder="Descrição">
-                <input type="Text" name="valor" placeholder="Valor"> 
-                <input type="text" name="pagamento" placeholder="Pagamento">
-                <input type="text" name="categoria" placeholder="Categoria">
-                <input type="date" name="data"> 
-                <button  class="btnsalvar" value="submit">Salvar</button>
-                <button onclick="history.go(-1)" class="btnVoltar">Voltar</button>
-              </form>
-            </div>
-        </div>
+  <!--Navbar Menu-->
+  <header>
+    <div class="logo">
+      <img src="image/dolar.png" alt="">
+      <a href="#"  class="header_logo">Financeiro</a>
     </div>
+    <nav class="nav" id="nav-menu">
+      <ion-icon name="close-outline" class="header_close" id="close-menu"></ion-icon>
+
+
+      <ul class="nav_list">
+        <li class="nav_item"><a href="lista.html" class="nav_link">Listas</a></li>
+        <li class="nav_item"><a href="#" class="nav_link">Previsão</a></li>
+      </ul>
+    </nav>
+    <ion-icon name="menu-outline" class="header_toggle" id="toggle-menu"></ion-icon>
+
+  </header>
+
+
+
+
+    <div class="table-container">
+      <h1 class="heading"></h1>
+      <button class="btn" id="abre">Add</button>
+      <table class="table" id="financeiro">
+          <thead>
+              <tr>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th>Pagamento</th>
+                  <th>Categoria</th>
+                  <th>Data</th>
+                  <th>Ação</th>
+              </tr>
+          </thead>
+          <tbody>
+              
+          </tbody>
+      </table>
+
+      <!--Form Add-->
+      <div class="modal-container add">
+          <div class="modal">
+            <form action="">
+              <input type="text" name="descricao" placeholder="Descrição">
+              <input type="number" name="valor" placeholder="Valor"> 
+              <input type="text" name="pagamento" placeholder="Pagamento">
+              <input type="text" name="categoria" placeholder="Categoria">
+              <input type="date" name="data"> 
+              <button  class="btnsalvar" value="submit">Salvar</button>
+            </form>
+          </div>
+      </div>
+
+      <!--Form Edit-->
+      <div class="modal-container editar">
+          <div class="modal">
+            <form action="">
+              <input type="text" name="descricao" placeholder="Descrição">
+              <input type="number" name="valor" placeholder="Valor"> 
+              <input type="text" name="pagamento" placeholder="Pagamento">
+              <input type="text" name="categoria" placeholder="Categoria">
+              <input type="date" name="data"> 
+              <button  class="btnsalvar" value="submit">Salvar</button>
+              <button onclick="history.go(-1)" class="btnVoltar">Voltar</button>
+            </form>
+          </div>
+      </div>
+  </div>
+
+
+  <!--navbar script-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    
     <script src="js/script.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>

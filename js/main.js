@@ -17,7 +17,9 @@ function writeUserData(descricao, valor, pagamento, categoria, data) {
         categoria: categoria,
         data: data
     }).then((onFullFilled) =>{
-        console.log("writed");
+        //alert("Valor Cadastrado!");
+        document.querySelector(".add").classList.remove("active");
+        addform.reset()
     },(onRejected)=>{
         console.log(onRejected);
     });
