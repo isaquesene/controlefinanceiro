@@ -36,6 +36,8 @@ function openModal(id){
 
   $(window).scroll(function(){
     if($(window).scrollTop() > 300){
-      btn.addClass('show')
+      btn.addClass('show');
+    }else{
+      btn.removeClass('show');
     }
   })
