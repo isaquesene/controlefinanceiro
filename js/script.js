@@ -31,3 +31,11 @@ function openModal(id){
   closeMenu.addEventListener('click', () =>{
     navMenu.classList.remove('show')
   })
+
+  var btn = $('#button');
+
+  $(window).scroll(function(){
+    if($(window).scrollTop() > 300){
+      btn.addClass('show')
+    }
+  })
