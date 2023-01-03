@@ -221,6 +221,7 @@ header{
     color: white;
     cursor: pointer;
     transition: .4s ease-in-out;
+    margin: 8px;
   }
   .btnsalvar:hover{
     box-shadow: #009879 10px 15px 15px -10px;
