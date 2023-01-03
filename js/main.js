@@ -79,7 +79,8 @@ usersRef.on('value', (snapshot) => {
                     valor: editform.valor.value,
                     pagamento: editform.pagamento.value,
                     categoria: editform.categoria.value,
-                    data: editform.data.value
+                    data: editform.data.value,
+                    tipo: editform.tipo.value
                 }).then((onFullFilled) =>{
                     alert("Alterado com sucesso!")
                     document.querySelector(".editar").classList.remove("active");
