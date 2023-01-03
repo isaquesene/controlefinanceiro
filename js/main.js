@@ -15,7 +15,8 @@ function writeUserData(descricao, valor, pagamento, categoria, data, tipo) {
         valor: valor,
         pagamento: pagamento,
         categoria: categoria,
-        data: data
+        data: data,
+        tipo: tipo
     }).then((onFullFilled) =>{
         //alert("Valor Cadastrado!");
         document.querySelector(".add").classList.remove("active");
@@ -45,6 +46,7 @@ usersRef.on('value', (snapshot) => {
             <td data-label="Pagamento">${users[user].pagamento}</td>
             <td data-label="Categoria">${users[user].categoria}</td>
             <td data-label="Data">${users[user].data}</td>
+            <td data-label="Tipo">${users[user].tipo}</td>
             <td data-label="Ação">
                 <button class="edit">Edit</button>
                 <button class="delete">Delete</button>
@@ -68,6 +70,7 @@ usersRef.on('value', (snapshot) => {
                 editform.pagamento.value = snapshot.val().pagamento;
                 editform.categoria.value = snapshot.val().categoria;
                 editform.data.value = snapshot.val().data;
+                editform.tipo.value = snapshot.val().tipo;
             }))
             editform.addEventListener("submit", (e) =>{
                 e.preventDefault();
@@ -108,7 +111,7 @@ btnSalvar.addEventListener("click", () =>{
         addform.addEventListener("submit", (e) => {
             e.preventDefault();
             writeUserData(addform.descricao.value, addform.valor.value, addform.pagamento.value, 
-            addform.categoria.value, addform.data.value)
+            addform.categoria.value, addform.data.value, addform.tipo.value)
         })
 })
 
