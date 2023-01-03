@@ -7,7 +7,7 @@ let btnSalvar = document.querySelector(".btn"),
 var database = firebase.database();
 var usersRef = firebase.database().ref('users/');
 
-function writeUserData(descricao, valor, pagamento, categoria, data) {
+function writeUserData(descricao, valor, pagamento, categoria, data, tipo) {
    // const db = getDatabase();
    let userId = usersRef.push().key;
     usersRef.child(userId).set({
