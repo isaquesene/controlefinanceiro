@@ -48,6 +48,10 @@ body{
   color: white;
 }
 
+#button.show{
+  opacity: 1;
+}
+
 
 
 
