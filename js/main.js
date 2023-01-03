@@ -28,7 +28,7 @@ function writeUserData(descricao, valor, pagamento, categoria, data, tipo) {
 
 /*writeUserData(1, "Arroz", "20,00", "cc nun", "29/12/2022")
 writeUserData(2, "Pão", "2,00", "cc nun", "29/12/2022")*/
-//writeUserData("macarrão", "12,00", "cc nun", "comida", "29/12/2022")
+writeUserData("macarrão", "12,00", "cc nun", "comida", "29/12/2022", saida)
 
 usersRef.on('value', (snapshot) => {
     const users = snapshot.val();
