@@ -32,9 +32,9 @@ function openModal(id){
     navMenu.classList.remove('show')
   })
 
-  var btn = $('#button');
+  var btn = document.getElementById('button');
 
-  $(window).scroll(function(){
+  btn(window).scroll(function(){
     if($(window).scrollTop() > 300){
       btn.addClass('show');
     }else{
@@ -44,5 +44,5 @@ function openModal(id){
 
   btn.on('click', function(e){
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    btn('html, body').animate({scrollTop:0}, '300');
   });
