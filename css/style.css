@@ -23,7 +23,7 @@ body{
   background-color: red;
 }
 
-#button icon-icon{
+#button{
   display: inline-block;
   background-color: #009879;
   color: white;
@@ -33,7 +33,7 @@ body{
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 4px;
   position: fixed;
 }
 
