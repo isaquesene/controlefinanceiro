@@ -43,6 +43,13 @@ body{
   z-index: 1000;
 }
 
+#button ion-icon{
+  font-size: 30px;
+  color: white;
+}
+
+
+
 
 /*-----------footer--------*/
 .ends{
