@@ -15,6 +15,13 @@ body{
 	flex-direction: column;
 }
 
+.entrada{
+  color: green;
+}
+
+.saida{
+  color: red;
+}
 /*----navbar-------*/
 a{
   text-decoration: none;
