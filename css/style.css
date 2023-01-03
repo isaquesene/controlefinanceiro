@@ -10,6 +10,11 @@ body{
     font-family: sans-serif;
 }
 
+.divType{
+	display: flex;
+	flex-direction: column;
+}
+
 /*----navbar-------*/
 a{
   text-decoration: none;
