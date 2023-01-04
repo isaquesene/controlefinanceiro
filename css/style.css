@@ -59,7 +59,7 @@ body{
   right: 10px;
   height: 50px;
   width: 50px;
-  display: grid;
+  display: none;
   place-items: center;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -72,7 +72,7 @@ body{
   width: calc(100% - 15px);
   background-color: #ffffff;
   border-radius: 50%;
-  display: none;
+  display: grid;
   place-items: center;
   font-size: 29px;
   color: #001a2e;
