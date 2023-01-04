@@ -66,6 +66,17 @@ body{
   cursor: pointer;
 }
 
+#progress-value{
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #001a2e;
+}
 
 
 
