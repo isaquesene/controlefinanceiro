@@ -34,7 +34,7 @@ function openModal(id){
 
  //scroll button
  let calcScrollValue = () =>{
-  let scrollProgress = document.getElementById("progress")
+  let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
   let pos = document.documentElement.scrollTop;
   console.log(pos);
