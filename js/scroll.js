@@ -4,7 +4,7 @@ let calcScrollValue = () =>{
     let progressValue = document.getElementById("progress-value");
     let pos = document.documentElement.scrollTop;
     //console.log(pos);
-    let calcHeigth = 
+    let calcHeight = 
       document.documentElement.scrollHeight - 
       document.documentElement.clientHeight;
       //console.log(calcHeigth);
