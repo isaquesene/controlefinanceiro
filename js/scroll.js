@@ -17,6 +17,10 @@ let calcScrollValue = () =>{
     }else{
         scrollProgress.style.display = "none";
     }
+
+    scrollProgress.addEventListener("click", () =>{
+        document.documentElement.scrollTop = 0;
+    });
    };
   
    window.onscroll = calcScrollValue;
