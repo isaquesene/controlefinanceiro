@@ -9,7 +9,7 @@ let calcScrollValue = () =>{
       document.documentElement.clientHeight;
       //console.log(calcHeigth);
   
-    let scrollValue = Math.round((pos * 100) / calcHeigth);
+    let scrollValue = Math.round((pos * 100) / calcHeight);
     //console.log(scrollValue);
 
     if(pos > 100){
