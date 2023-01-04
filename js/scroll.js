@@ -22,7 +22,7 @@ let calcScrollValue = () =>{
         document.documentElement.scrollTop = 0;
     });
 
-    scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #009879 ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#009879 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
     //  background-color: #009879;
    };
   
