@@ -66,6 +66,7 @@ html{
   height: 50px;
   width: 50px;
   display: none;
+  display: inline-block;
   place-items: center;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
