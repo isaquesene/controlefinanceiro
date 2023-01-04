@@ -32,4 +32,13 @@ function openModal(id){
     navMenu.classList.remove('show')
   })
 
- 
+ //scroll button
+ let calcScrollValue = () =>{
+  let scrollProgress = document.getElementById("progress")
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  console.log(pos);
+ };
+
+ window.sonscroll = calcScrollValue;
+ window.onload = calcScrollValue;
