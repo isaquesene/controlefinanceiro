@@ -19,5 +19,5 @@ let calcScrollValue = () =>{
     }
    };
   
-   window.sonscroll = calcScrollValue;
+   window.onscroll = calcScrollValue;
    window.onload = calcScrollValue;
