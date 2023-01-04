@@ -15,7 +15,7 @@ let calcScrollValue = () =>{
     if(pos > 100){
         scrollProgress.style.display = "grid";
     }else{
-        //scrollProgress.style.display = "none";
+        scrollProgress.style.display = "none";
     }
 
     scrollProgress.addEventListener("click", () =>{
