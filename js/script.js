@@ -41,7 +41,10 @@ function openModal(id){
   let calcHeigth = 
     document.documentElement.scrollHeight - 
     document.documentElement.clientHeight;
-    console.log(calcHeigth);
+    //console.log(calcHeigth);
+
+  let scrollValue = Math.round((pos * 100) / calcHeigth);
+  console.log(scrollValue);
  };
 
  window.sonscroll = calcScrollValue;
