@@ -13,7 +13,7 @@ let calcScrollValue = () =>{
     //console.log(scrollValue);
 
     if(pos > 100){
-        scrollProgress.style.display = "inline-block";
+        scrollProgress.style.display = "grid";
     }else{
         scrollProgress.style.display = "none";
     }
