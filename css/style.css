@@ -59,14 +59,11 @@ html{
 #progress{
   background-color: #009879;
   position: fixed;
-  opacity: 0.5s, visibility .5s;
-  opacity: 1;
   bottom: 20px;
   right: 10px;
   height: 50px;
   width: 50px;
   display: none;
-  display: inline-block;
   place-items: center;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
