@@ -37,7 +37,10 @@ function openModal(id){
   let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
   let pos = document.documentElement.scrollTop;
-  console.log(pos);
+  //console.log(pos);
+  let calcHeigth = 
+    document.documentElement.scrollHeight - 
+    document.documentElement.clientHeight;
  };
 
  window.sonscroll = calcScrollValue;
