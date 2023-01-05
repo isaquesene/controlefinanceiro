@@ -130,5 +130,9 @@ window.addEventListener("click", (e)=>{
 
 function tableSearch(){
     let input, filter, table, tr, td, i, txtValue;
-    console.log("Ola Sene")
+   // console.log("Ola Sene")
+
+   input = document.getElementById("myInput");
+   filter = document.value.toUpperCase();
+   table = document.getElementById("financeiro");
 }
