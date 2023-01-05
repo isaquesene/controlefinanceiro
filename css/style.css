@@ -81,6 +81,12 @@ html{
   color: #001a2e;
 }
 
+.inputsearch{
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  border: 1px #009879 solid;
+  outline: none;
+}
 
 
 /*-----------footer--------*/
