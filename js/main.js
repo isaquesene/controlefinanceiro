@@ -133,7 +133,7 @@ function tableSearch(){
    // console.log("Ola Sene")
 
    input = document.getElementById("myInput");
-   filter = document.value.toUpperCase();
+   filter = input.value.toUpperCase();
    table = document.getElementById("financeiro");
 
    tr  = table.getElementsByTagName("tr");
