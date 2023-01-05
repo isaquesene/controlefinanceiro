@@ -130,4 +130,5 @@ window.addEventListener("click", (e)=>{
 
 function tableSearch(){
     let input, filter, table, tr, td, i, txtValue;
+    console.log("Ola Sene")
 }
