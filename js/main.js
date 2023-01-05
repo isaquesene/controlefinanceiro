@@ -126,3 +126,8 @@ window.addEventListener("click", (e)=>{
         editform.reset();
     }
 })
+
+
+function tableSearch(){
+    let input, filter, table, tr, td, i, txtValue;
+}
