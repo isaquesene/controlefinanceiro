@@ -139,7 +139,7 @@ function tableSearch(){
    tr  = table.getElementsByTagName("tr");
 
    for(let i = 0; i < tr.length; i++){
-    td = tr[i].getElementsByTagName("td")[0],[1];
+    td = tr[i].getElementsByTagName("td")[5];
     if(td){
         txtValue = td.textContent || td.innerText;
         if(txtValue.toUpperCase().indexOf(filter) > -1){
