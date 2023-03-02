@@ -9,11 +9,11 @@ if(isset($_POST['send'])){
     $pagamento = $_POST['pagamento'];
     $categoria = $_POST['categoria'];
     $dataent = $_POST['dataent'];
-    $ent_sainda = $_POST['ent_sainda'];
+    $ent_saida = $_POST['ent_saida'];
 
 
-    $request = "insert into financa(descricao, valor, pagamento, categoria, dataent, ent_sainda) values 
-    ('$descricao','$valor','$pagamento','$categoria','$dataent','$ent_sainda')";
+    $request = "insert into financa(descricao, valor, pagamento, categoria, dataent, ent_saida) values 
+    ('$descricao','$valor','$pagamento','$categoria','$dataent','$ent_saida')";
 
 
     mysqli_query($conn, $request);

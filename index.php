@@ -1,6 +1,6 @@
-<?php 
-  //conexão
-  include 'conectar.php';
+<?php
+//conexão
+include 'conectar.php';
 ?>
 
 <!DOCTYPE html>
@@ -57,22 +57,42 @@
                   <th>Ação</th>
               </tr>
           </thead>
-          <tbody>
-              
-          </tbody>
-      </table>
+    <tbody class="table">
+      <?php
+      @include 'conectar.php';
+
+      $sql = "select * from financa";
+      $result = mysqli_query($conn, $sql);
+      while ($row = mysqli_fetch_assoc($result)) {
+      ?>
+          <tr>
+          <th><?php echo $row['status'] ?></th>
+          <th><?php echo $row['boleto'] ?></th>
+          <th><?php echo $row['contrato'] ?></th>
+
+          <td>
+            <a href="edit.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="bttn">Editar</i></a>
+            <a href="deletar.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="bttn">Excluir</i></a>
+          </td>
+          </tr>
+      <?php
+        }
+      ?>
+    
+    </tbody>
+  </table>
 
       <!--Form Add-->
       <div class="modal-container add">
           <div class="modal">
-            <form action="">
+            <form action="crud_financa.php" method="post">
               <input type="text" name="descricao" placeholder="Descrição">
               <input type="text" name="valor" placeholder="Valor"> 
               <input type="text" name="pagamento" placeholder="Pagamento">
               <input type="text" name="categoria" placeholder="Categoria">
               <input type="date" name="dataent"> 
               <div class="divType">
-                <select id="type" name="ent_sainda" value="tipo">
+                <select id="type" name="ent_saida" value="ent_saida">
                   <option class="entrada">Entrada</option>
                   <option class="saida">Saída</option>
                 </select>
@@ -82,17 +102,25 @@
           </div>
       </div>
 
+      <!--SELECT EDIT-->
+      <?php
+      $id = $_GET['id_financa'];
+      $sql = "select * from financa where id_financa = $id limit 1";
+      $result = mysqli_query($conn, $sql);
+      $row = mysqli_fetch_assoc($result);
+      ?>
+
       <!--Form Edit-->
       <div class="modal-container editar">
           <div class="modal">
             <form action="">
-              <input type="text" name="descricao" placeholder="Descrição">
-              <input type="text" name="valor" placeholder="Valor"> 
-              <input type="text" name="pagamento" placeholder="Pagamento">
-              <input type="text" name="categoria" placeholder="Categoria">
-              <input type="date" name="data"> 
+              <input type="text" name="descricao" value="<?php echo $row['name'] ?>">
+              <input type="text" name="valor" value="<?php echo $row['valor'] ?>"> 
+              <input type="text" name="pagamento" value="<?php echo $row['pagamento'] ?>">
+              <input type="text" name="categoria" value="<?php echo $row['categoria'] ?>">
+              <input type="date" name="dataent" value="<?php echo $row['dataent'] ?>"> 
               <div class="divType">
-                <select id="type" name="tipo" value="tipo">
+                <select id="type" name="ent_saida" value="ent_saida">
                   <option class="entrada">Entrada</option>
                   <option class="saida">Saída</option>
                 </select>
