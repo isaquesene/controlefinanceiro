@@ -1,3 +1,8 @@
+<?php 
+  //conexão
+  include 'conectar.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,7 +137,7 @@ btn.on('click', function(e){
     
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
-  <script>
+  <!--<script>
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyBt88WuddD5lW9whXSPtIjPjCx2zYQ6y1U",
@@ -149,7 +154,7 @@ btn.on('click', function(e){
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-  </script>
+  </script>-->
   <script src="js/main.js"></script>
 
 </body>
