@@ -70,9 +70,9 @@
               <input type="text" name="valor" placeholder="Valor"> 
               <input type="text" name="pagamento" placeholder="Pagamento">
               <input type="text" name="categoria" placeholder="Categoria">
-              <input type="date" name="data"> 
+              <input type="date" name="dataent"> 
               <div class="divType">
-                <select id="type" name="tipo" value="tipo">
+                <select id="type" name="ent_sainda" value="tipo">
                   <option class="entrada">Entrada</option>
                   <option class="saida">Saída</option>
                 </select>
