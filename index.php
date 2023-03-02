@@ -66,9 +66,12 @@ include 'conectar.php';
       while ($row = mysqli_fetch_assoc($result)) {
       ?>
           <tr>
-          <th><?php echo $row['status'] ?></th>
-          <th><?php echo $row['boleto'] ?></th>
-          <th><?php echo $row['contrato'] ?></th>
+          <th><?php echo $row['descricao'] ?></th>
+          <th><?php echo $row['valor'] ?></th>
+          <th><?php echo $row['pagamento'] ?></th>
+          <th><?php echo $row['categoria'] ?></th>
+          <th><?php echo $row['dataent'] ?></th>
+          <th><?php echo $row['ent_saida'] ?></th>
 
           <td>
             <a href="edit.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="bttn">Editar</i></a>
